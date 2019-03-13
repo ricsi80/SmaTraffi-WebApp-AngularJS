@@ -16,30 +16,35 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',
  	$scope.menu = [
     {
       link : '',
-      title: 'Dashboard',
-      icon: 'action:ic_dashboard_24px' // we have to use Google's naming convention for the IDs of the SVGs in the spritesheet
+      title: 'Traffic Information',
+      icon: 'maps:ic_traffic_24px' // we have to use Google's naming convention for the IDs of the SVGs in the spritesheet
     },
     {
       link : '',
-      title: 'Friends',
-      icon: 'social:ic_group_24px'
+      title: 'Statistics',
+      icon: 'av:ic_library_books_24px'
     },
     {
       link : '',
-      title: 'Messages',
-      icon: 'communication:ic_message_24px'
+      title: 'Reports',
+      icon: 'image:ic_picture_as_pdf_24px'
     }
   ];
   $scope.admin = [
     {
       link : '',
-      title: 'Trash',
-      icon: 'action:ic_delete_24px'
+      title: 'Call',
+      icon: 'communication:ic_call_24px'
     },
     {
-      link : 'showListBottomSheet($event)',
-      title: 'Settings',
-      icon: 'action:ic_settings_24px'
+      link : '',
+      title: 'Email',
+      icon: 'communication:ic_email_24px'
+    },
+    {
+      link : '',
+      title: 'Locate Us',
+      icon: 'communication:ic_location_on_24px'
     }
   ];
   /*
