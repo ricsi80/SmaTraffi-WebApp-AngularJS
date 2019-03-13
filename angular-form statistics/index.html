@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Statistics</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body ng-controller="demoAppController">
+    <!-- jQueryUI Datepicker Style -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- Font-Awesome Icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!-- UNOS Branding CSS -->
+    <!-- <link rel="stylesheet" href="https://dl.dropboxusercontent.com/u/109459884/css/unos_branding.css" /> -->
+    <!-- DLA API POST DATA FORM-->
+    <div ng-app="app" ng-controller="appCtrl" class="form">
+
+        <form ng-submit=myFunc() class="">
+
+            <!-- REQUIRED -->
+            <div class="form-row row">
+                <div class="col-25">
+                    <label for="intersection">Intersection <span class="asterisk">*</span></label>
+                </div>
+                <div class="col-75">
+
+                    <select ng-model="selectedIntersection" ng-options="x for x in intersection" class="value">
+                    </select>
+                </div>
+
+            </div>
+            <!-- End of Intersection -->
+
+            <div class="form-row row">
+                <div class="col-25">
+                    <label for="statsType">Statistic Type <span class="asterisk">*</span></label>
+                </div>
+                <div class="col-75">
+
+                    <select ng-model="selectedStatsType" ng-options="x for x in statsType" class="value">
+                    </select>
+                </div>
+
+            </div>
+            <!-- End of Statistic Type -->
+
+            <div class="form-row row">
+                <div class="col-25">
+                    <label for="startDate">Start Date<span class="asterisk">*</span></label>
+                </div>
+                <div class="col-75">
+
+                    <!-- <p>{{datePicker || "00/00/0000"}}</p> -->
+                    <input type="text" ng-model="datePicker" datepicker class="value" >
+                </div>
+
+            </div>
+            <!-- End of Start Date -->
+
+            <div class="form-row row">
+                <div class="col-25">
+                    <label for="endDate">End Date<span class="asterisk">*</span></label>
+                </div>
+                <div class="col-75">
+                    <input type="text" ng-model="datePicker1" datepicker class="value" >
+                </div>
+
+
+            </div>
+            <!-- End of End Date -->
+
+            <div class="form-row row">
+                <div class="col-25">
+                    <label for="selectRoads">Select Roads<span class="asterisk">*</span></label>
+                </div>
+                <div class="col-75">
+                    <select ng-model="selectedRoads" ng-options="x for x in roads" class="value">
+                </div>
+
+            </div>
+            <!-- End of Select Roads -->
+
+
+            <div class="form-row row">
+                <div class="col-25">
+                    <label for="selectRoads">Select Roads<span class="asterisk">*</span></label>
+                </div>
+                <div class="col-75">
+                    <select ng-model="selectedRoads" ng-options="x for x in roads" class="value">
+                </div>
+
+            </div>
+            <!-- End of Select Roads -->
+
+            <!-- <div class="form-row row">
+                <div class="col-25">
+                    <br>
+                    <label for="hours">Hours<span class="asterisk">*</span></label>
+                </div>
+                <div class="col-75">
+                    <input type="date" name="hours" id="hours" class="value" >
+                </div>
+
+            </div> -->
+            <!-- End of Hours -->
+
+            <div class="form-row row">
+                <div class="col-25">
+                    <label for="groupBy">Group By<span class="asterisk">*</span></label>
+                </div>
+                <div class="col-75">
+                    <select ng-model="selectedGroupBy" ng-options="x for x in groupBy" class="value">
+                </div>
+
+
+                </select>
+            </div>
+            <!-- End of Group By -->
+
+
+            <!-- ReCaptcha REQUIRED --><br />
+            <!-- <div class="form-row row">
+                <div class="g-recaptcha" data-sitekey="6LdsoCkTAAAAAL-UOJHoq57yHtPSMBL7vfwhMay1"></div>
+            </div> -->
+
+
+            <br><br><br><br><br>
+            <p>{{myTxt}}</p>
+
+            <input type="submit" value="Submit">
+
+
+        </form>
+
+        <!-- <div>{{json}}</div> -->
+    </div>
+    <!-- End of DLA API POST DATA FORM -->
+    <!-- Required JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
