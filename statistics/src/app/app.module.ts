@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatSelectModule } from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -16,8 +18,9 @@ import {MatInputModule} from '@angular/material/input';
     RouterModule,
     AppRoutingModule,
     MatFormFieldModule,
-    MatInputModule
-    // MatSelectModule
+    MatInputModule,
+    MatSelectModule,
+    BrowserAnimationsModule
     // MatButtonModule,
     // MatFormFieldModule,
     // MatInputModule,
